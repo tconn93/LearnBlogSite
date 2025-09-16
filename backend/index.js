@@ -49,7 +49,7 @@ app.post('/api/admin/blogs', async (req, res) => {
   console.log("Recived Post Request");
   console.log(tempBlog)
   console.log(tempBlog.title)
-//try{
+try{
   let blog = {
     title: tempBlog.title,
     description: tempBlog.description,
@@ -65,9 +65,9 @@ app.post('/api/admin/blogs', async (req, res) => {
 
   const newBlog = await Blog.create(blog);
   res.status(201).json(newBlog);
-// } catch (error) {
-//   res.status(400).json({ error: error.message });
-// }
+} catch (error) {
+  res.status(400).json({ error: error.message });
+}
 });
 
 
