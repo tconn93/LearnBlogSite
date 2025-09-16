@@ -13,7 +13,8 @@ npm run dev
 
 
 > [!NOTE]
-> Add how to connect database to README.md
+> TODO: Add how to connect database to README.md
+> TODO: Create a model for my blog data
 
 ## Frontend with Vite/React 
 
@@ -26,3 +27,4 @@ npm run dev
 
 > [!NOTE]
 > TODO: Add a .env file and tell user how to use it. 
+> TODO: Create a wireframe for layout of the site. 
