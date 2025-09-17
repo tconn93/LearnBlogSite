@@ -36,7 +36,13 @@ app.get('/api/blogs', async (req, res) => {
     if(blog.status === 'published'){
     let dto = {
       title: blog.title,
-      slug: blog.slug      
+      slug: blog.slug,
+      description: blog.description,
+      createdAt: blog.createdAt,
+      lastUpdated: blog.lastUpdated,
+      views: blog.views,
+      author: blog.author
+            
     }
     x.push(dto);
     }

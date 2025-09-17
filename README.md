@@ -14,7 +14,7 @@ npm run dev
 
 > [!NOTE]
 > TODO: Add how to connect database to README.md
-> TODO: Create a model for my blog data
+
 
 ## Frontend with Vite/React 
 
@@ -25,6 +25,12 @@ cd frontend
 npm run dev
 ```
 
+You will need a .env file setup like 
+
+```.env
+VITE_WEB_URL=https://localhost:[YourPort]
+
+```
+
 > [!NOTE]
-> TODO: Add a .env file and tell user how to use it. 
 > TODO: Create a wireframe for layout of the site. 

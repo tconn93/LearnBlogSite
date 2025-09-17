@@ -8,6 +8,7 @@ nav ul {
 
 nav li {
   margin: 0 10px; /* Provides equal spacing on both sides of each item */
+  background-color: black;
 }
 
 nav a {

@@ -12,7 +12,6 @@ function HomePage() {
     // Function to fetch data from the backend
     const fetchPosts = async () => {
       try {
-        // Our backend API is running on port 3001
         const response = await axios.get(WebUtil.URL+'/api/blogs');
         setPosts(response.data);
       } catch (err) {
@@ -34,8 +33,9 @@ function HomePage() {
       <main>
         {posts.map((post) => (
           <article key={post.id} className="post">
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
+            <h2>{post.title} - {post.author}</h2>
+            <p>{post.description}</p>
+            <p>{post.views} views <span>{post.lastUpdated}</span></p>
           </article>
         ))}
       </main>
