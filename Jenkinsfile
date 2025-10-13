@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'cd frontend'
         sh 'echo $USER'
+        sh 'pwd'
         sh 'npm install'
         sh 'npm run build'
       }
