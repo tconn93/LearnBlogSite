@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'cd frontend'
+        sh 'echo $USER'
         sh 'npm install'
         sh 'npm run build'
       }
