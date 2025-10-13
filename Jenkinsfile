@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  tools {
+        nodejs 'Node 24'  // Name from global config
+    }
   stages {
     stage('Build') {
       steps {
