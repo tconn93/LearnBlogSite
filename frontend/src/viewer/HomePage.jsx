@@ -1,7 +1,4 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import './HomePage.css';
-import WebUtil from '../util/WebUtil';
+import { useState, useEffect } from 'react';\nimport { Link } from 'react-router-dom';\nimport axios from 'axios';\nimport './HomePage.css';\nimport WebUtil from '../util/WebUtil';
 
 function HomePage() {
   const [posts, setPosts] = useState([]);
@@ -28,19 +25,7 @@ function HomePage() {
   if (loading) return <div>Loading...</div>;
   if (error) return <div style={{ color: 'red' }}>{error}</div>;
 
-  return (
-    <div >
-      <main>
-        {posts.map((post) => (
-          <article key={post.id} className="post">
-            <h2>{post.title} - {post.author}</h2>
-            <p>{post.description}</p>
-            <p>{post.views} views <span>{post.lastUpdated}</span></p>
-          </article>
-        ))}
-      </main>
-    </div>
-  );
+  return (\n    <div>\n      <main>\n        {posts.map((post) => (\n          <article key={post.id} className=\"post-card\">\n            <h2>{post.title}</h2>\n            <p className=\"excerpt\">{post.description}</p>\n            <div className=\"post-meta\">\n              <span>By {post.author}</span>\n              <span>{post.views} views</span>\n              <span>{new Date(post.createdAt).toLocaleDateString()}</span>\n            </div>\n            <Link to={`/blog/${post.slug}`} className=\"read-more\">Read More</Link>\n          </article>\n        ))}\n      </main>\n    </div>\n  );
 }
 
 export default HomePage;

@@ -190,17 +190,7 @@ function Admin() {
 
 
 
-  return (
-    <div className="admin-container">
-        <div className="form-section">
-        <FormComponent blogForm={blogForm} setBlogForm={(x)=>setBlogForm(x)} currentPost={currentPost} setCurrentPost={(x)=>setCurrentPost(x)}  fetchPosts={()=>fetchPosts()}/>
-      </div>
-      <hr />
-      <div className="list-section">
-      <BlogList posts={posts} onDelete={handleDelete} onEdit={(x)=>handleEdit(x)} fetchPosts={()=>fetchPosts()}/>
-        </div>
-    </div>
-  );
+  return (\n    <div className=\"admin-container\">\n        <div className=\"form-section\">\n            <FormComponent blogForm={blogForm} setBlogForm={setBlogForm} currentPost={currentPost} setCurrentPost={setCurrentPost} fetchPosts={fetchPosts} />\n        </div>\n        <div className=\"list-section\">\n            <BlogList posts={posts} onDelete={handleDelete} onEdit={handleEdit} fetchPosts={fetchPosts} />\n        </div>\n    </div>\n  );
 }
 
 
